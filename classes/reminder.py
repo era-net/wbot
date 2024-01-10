@@ -8,11 +8,11 @@ class Reminder:
 
     # motivational messages
     mmt = [
-        "Hi 🖐\nToday is a great day to start excercising and getting your daily streak going\. Complete your exercises today and [mark them as done](https://era-kast.ch)\!",
-        "Good evening 🙋‍♀️\nYou could make your day just a little bit more beautiful by completing some exercises\. [Mark them as done](https://era-kast.ch) once you finish\!",
-        "Exercise? 🏋️‍♀️ [Mark it as done](https://era-kast.ch) once you finish\!",
-        "Let's GO\! 🏋️‍♀️ [Mark it as done](https://era-kast.ch) once you finish\!",
-        "Hi\nYou'd feel better after an exercise 💪 [Mark it as done](https://era-kast.ch) once you finish\!"
+        "Hi 🖐\nToday is a great day to start excercising and getting your daily streak going\. Complete your exercises today and mark them as /done\!",
+        "Good evening 🙋‍♀️\nYou could make your day just a little bit more beautiful by completing some exercises\. Mark them as /done once you finish\!",
+        "Exercise? 🏋️‍♀️ Mark it as /done once you finish\!",
+        "Let's GO\! 🏋️‍♀️ Mark it as /done once you finish\!",
+        "Hi\nYou'd feel better after an exercise 💪 Mark it as /done once you finish\!"
     ]
 
     def run(self):
@@ -23,10 +23,10 @@ class Reminder:
                 rand_int = random.randint(0, len(self.mmt)-1)
                 tgm.send_md2(self.mmt[rand_int])
             elif strk == 1:
-                tgm.send_md2(f"You're about to loose your {strk}st daily streak 😥 Complete your todays exercises till 00:00 and [mark them as done](https://era-kast.ch) to continue your streak\!")
+                tgm.send_md2(f"You're about to loose your {strk}st daily streak 😥 Complete your todays exercises till 00:00 and mark them as /done\!")
             elif strk == 2:
-                tgm.send_md2(f"You're about to loose your {strk}nd daily streak 😥 Complete your todays exercises till 00:00 and [mark them as done](https://era-kast.ch) to continue your streak\!")
+                tgm.send_md2(f"You're about to loose your {strk}nd daily streak 😥 Complete your todays exercises till 00:00 and mark them as /done to continue your streak\!")
             elif strk == 3:
-                tgm.send_md2(f"You're about to loose your {strk}rd daily streak 😥 Complete your todays exercises till 00:00 and [mark them as done](https://era-kast.ch) to continue your streak\!")
+                tgm.send_md2(f"You're about to loose your {strk}rd daily streak 😥 Complete your todays exercises till 00:00 and mark them as /done to continue your streak\!")
             else:
-                tgm.send_md2(f"You're about to loose your {strk}th daily streak 😥 Complete your todays exercises till 00:00 and [mark them as done](https://era-kast.ch) to continue your streak\!")
+                tgm.send_md2(f"You're about to loose your {strk}th daily streak 😥 Complete your todays exercises till 00:00 and mark them as /done to continue your streak\!")

@@ -1,4 +1,3 @@
-# This example show how to use inline keyboards and process button presses
 import telebot
 from classes import Controller, Connection
 from mysql.connector import connect, Error
