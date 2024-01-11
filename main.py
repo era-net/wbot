@@ -1,4 +1,4 @@
-from classes import Resetter, Reminder
+from classes import Resetter, Reminder, Telegram
 import schedule
 import time
 
@@ -13,5 +13,9 @@ schedule.every().thursday.at("19:15", "Europe/Zurich").do(reminder.run)
 schedule.every().friday.at("10:33", "Europe/Zurich").do(reminder.run)
 
 while True:
-    schedule.run_pending()
-    time.sleep(60) # wait one minute
+    try:
+        schedule.run_pending()
+        time.sleep(60) # wait one minute
+    except:
+        tgm = Telegram()
+        tgm.send_text("Error: WBOT main.py")

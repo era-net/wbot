@@ -36,4 +36,7 @@ def test(message):
 
     bot.send_message(message.chat.id, text)
 
-bot.polling()
+try:
+    bot.polling()
+except:
+    bot.send_message(conn.TELEGRAM_CHAT_ID, "Error: WBOT command_handler.py")
