@@ -19,3 +19,4 @@ while True:
     except:
         tgm = Telegram()
         tgm.send_text("Error: WBOT main.py")
+        break
